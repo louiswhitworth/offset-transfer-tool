@@ -49,15 +49,9 @@ def offsetParentMatrixToolUI():
     
 
     #Adjust layout
-    cmds.formLayout(mainLayout, e=1, attachForm=[
-                                                 (clearTransformsButton, 'top', 5), (clearTransformsButton, 'left', 5), (clearTransformsButton, 'right', 5),
-                                                 (returnTransformsButton, 'left', 5), (returnTransformsButton, 'right', 5)
-                                                 ],
-                                                      
-                                    attachControl=[
-                                                (returnTransformsButton, 'top', 5, clearTransformsButton)]
-
-                                                 )
+    cmds.formLayout(mainLayout, e=1, attachForm=[(clearTransformsButton, 'top', 5), (clearTransformsButton, 'left', 5), (clearTransformsButton, 'right', 5),
+                                                 (returnTransformsButton, 'left', 5), (returnTransformsButton, 'right', 5)], 
+                                    attachControl=[(returnTransformsButton, 'top', 5, clearTransformsButton)])
 
     #Display window
     cmds.showWindow(window)
